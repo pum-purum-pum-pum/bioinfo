@@ -4,6 +4,8 @@ use std::{
     collections::{HashMap, HashSet},
     io::prelude::*,
 };
+#[macro_use]
+extern crate lazy_static;
 
 #[macro_use] 
 extern crate itertools;
@@ -29,15 +31,22 @@ fn count_occurences(genome: &str, pattern: &str, d: usize) -> usize {
     res
 }
 
+lazy_static! {
+    static ref COMPLEMENTS: HashMap<char, char> = {
+        let mut complement_table = HashMap::new();
+        complement_table.insert('A', 'T');
+        complement_table.insert('C', 'G');
+        complement_table.insert('G', 'C');
+        complement_table.insert('T', 'A');
+        complement_table
+    };
+}
+
 fn complement(genome: &str) -> String {
-    let mut complement_table = HashMap::new();
-    complement_table.insert('A', 'T');
-    complement_table.insert('C', 'G');
-    complement_table.insert('G', 'C');
-    complement_table.insert('T', 'A');
+    
     let mut result = String::new();
     for i in genome.chars() {
-        result.push(*complement_table.get(&i).unwrap());
+        result.push(*COMPLEMENTS.get(&i).unwrap());
     }
     return result;
 }
