@@ -1,0 +1,1 @@
+# MIPT bioinformatics course on Rossalind made with Rust for fun
