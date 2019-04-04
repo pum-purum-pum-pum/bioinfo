@@ -1,1 +1,0 @@
-{"rustc":7278532941893798131,"features":"[]","target":16867859484360246114,"profile":14891217944882224483,"path":16011019129592849487,"deps":[["rand v0.6.5","rand",11518968460062030304]],"local":[{"MtimeBased":[[1553426015,203020891],".fingerprint/class2-2d5a0d3e48db5f32/dep-example-greedy_motif_with_pseudocounts-2d5a0d3e48db5f32"]}],"rustflags":[],"edition":"Edition2018"}
