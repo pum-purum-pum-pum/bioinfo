@@ -1,7 +1,0 @@
-[package]
-name = "clump_finding"
-version = "0.1.0"
-authors = ["vlad <vladzhukovtirko@gmail.com>"]
-edition = "2018"
-
-[dependencies]
